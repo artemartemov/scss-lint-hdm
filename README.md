@@ -9,6 +9,13 @@ it into your SCM hooks. It uses rules established by the team at
 [Causes.com](http://causes.com).
 
 ### Installation
+=======
+## Requirements
+
+ * Ruby 1.9+
+ * Sass 3 (files you wish to lint must be written in Sass 3 syntax)
+
+## Installation
 
 `gem install scss-lint`
 

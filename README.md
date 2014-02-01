@@ -20,10 +20,10 @@ established by the team at [Causes.com](https://causes.com).
 * [Usage](#usage)
 * [Configuration](#configuration)
 * [Linters](#linters)
-* [Contributing](#contributing)
-* [Changelog](#changelog)
 * [Editor Integration](#editor-integration)
 * [Git Integration](#git-integration)
+* [Contributing](#contributing)
+* [Changelog](#changelog)
 * [License](#license)
 
 ## Requirements
@@ -128,22 +128,6 @@ preferred style.
 
 ###[» Linters Documentation](lib/scss_lint/linter/README.md)
 
-## Contributing
-
-We love getting feedback with or without pull requests. If you do add a new
-feature, please add tests so that we can avoid breaking it in the future.
-
-Speaking of tests, we use `rspec`, which can be run like so:
-
-```bash
-bundle exec rspec
-```
-
-## Changelog
-
-If you're interested in seeing the changes and bug fixes between each version
-of `scss-lint`, read the [SCSS-Lint Changelog](CHANGELOG.md).
-
 ## Editor Integration
 
 ### Vim
@@ -162,6 +146,22 @@ Install the
 
 If you'd like to integrate `scss-lint` into your Git workflow, check out our
 Git hook manager, [overcommit](https://github.com/causes/overcommit).
+
+## Contributing
+
+We love getting feedback with or without pull requests. If you do add a new
+feature, please add tests so that we can avoid breaking it in the future.
+
+Speaking of tests, we use `rspec`, which can be run like so:
+
+```bash
+bundle exec rspec
+```
+
+## Changelog
+
+If you're interested in seeing the changes and bug fixes between each version
+of `scss-lint`, read the [SCSS-Lint Changelog](CHANGELOG.md).
 
 ## License
 

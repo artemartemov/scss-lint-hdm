@@ -88,6 +88,7 @@ linters:
     enabled: false
     exclude:
       - 'path/to/file.scss'
+      - 'path/to/directory/**'
 
   Indentation:
     enabled: true

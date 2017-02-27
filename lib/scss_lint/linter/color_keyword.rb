@@ -8,6 +8,7 @@ module SCSSLint
       map-get
       map-has-key
       map-remove
+      palette
     ].to_set
 
     def visit_script_color(node)

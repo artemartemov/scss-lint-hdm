@@ -5,10 +5,18 @@ module SCSSLint
 
     COLOR_FUNCTIONS = %w[rgb rgba hsl hsla].freeze
 
+    FUNCTIONS_ALLOWING_COLOR_KEYWORD_ARGS = %w[
+      map-get
+      map-has-key
+      map-remove
+      palette
+    ].to_set
+
     def visit_script_color(node)
       return if in_variable_declaration?(node) ||
                 in_map_declaration?(node) ||
-                in_rgba_function_call?(node)
+                in_rgba_function_call?(node) ||
+                in_allowed_function_call?(node)
 
       # Source range sometimes includes closing parenthesis, so extract it
       color = source_from_range(node.source_range)[/(#?[a-z0-9]+)/i, 1]
@@ -85,6 +93,11 @@ module SCSSLint
       color_function?(node) &&
         all_arguments_are_literals?(node) &&
         !function_in_variable_declaration?(node)
+    end
+
+    def in_allowed_function_call?(node)
+      (funcall = node_ancestor(node, 2)).is_a?(Sass::Script::Tree::Funcall) &&
+        FUNCTIONS_ALLOWING_COLOR_KEYWORD_ARGS.include?(funcall.name)
     end
   end
 end

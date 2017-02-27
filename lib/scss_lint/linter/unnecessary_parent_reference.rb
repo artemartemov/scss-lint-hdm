@@ -26,6 +26,12 @@ module SCSSLint
       # }
       return if sequence.members[1..-1].any? { |ss| sequence_contains_parent_reference?(ss) }
 
+      # Allow sequences that contain parent references, e.g.
+      # element {
+      #   & .foo { ... }
+      # }
+      return if sequence.members.size > 1 && (sequence_starts_with_parent?(sequence.members[0]) && !sequence_starts_with_parent?(sequence.members[1]))
+
       # Special case: allow an isolated parent to appear if it is part of a
       # comma sequence of more than one sequence, as this could be used to DRY
       # up code.

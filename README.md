@@ -1,4 +1,4 @@
-<span align="center"># SCSS Linter for HDM</span>
+# SCSS Linter for HDM
 
 [![Gem Version](https://badge.fury.io/rb/scss_lint.svg)](http://badge.fury.io/rb/scss_lint)
 [![Build Status](https://travis-ci.org/brigade/scss-lint.svg?branch=master)](https://travis-ci.org/brigade/scss-lint)

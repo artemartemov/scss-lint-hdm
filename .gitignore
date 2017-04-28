@@ -1,0 +1,8 @@
+.bundle
+Gemfile.lock
+/coverage
+/pkg
+
+# YARD
+/doc
+/.yardoc

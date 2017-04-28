@@ -1,0 +1,117 @@
+AllCops:
+  TargetRubyVersion: 1.9 # Oldest version of Ruby we support
+
+AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+AssignmentInCondition:
+  Enabled: false
+
+# Enforcing this results in a lot of unnecessary indentation.
+ClassAndModuleChildren:
+  Enabled: false
+
+ClassLength:
+  Exclude:
+    - 'lib/scss_lint/config.rb'
+    - 'lib/scss_lint/cli.rb'
+
+CollectionMethods:
+  PreferredMethods:
+    reduce: inject
+
+Documentation:
+  Exclude:
+    - 'spec/scss_lint/**/*'
+    - 'spec/scss_lint/linter/**/*'
+
+Encoding:
+  EnforcedStyle: when_needed
+
+Eval:
+  Exclude:
+    - 'lib/scss_lint/sass/script.rb'
+
+FormatString:
+  Enabled: false
+
+FileName:
+  Exclude:
+    - 'bin/scss-lint'
+    - 'Gemfile'
+    - 'Rakefile'
+    - '*.gemspec'
+
+GuardClause:
+  Enabled: true
+
+HandleExceptions:
+  Exclude:
+    - 'spec/scss_lint/cli_spec.rb'
+
+IfUnlessModifier:
+  Enabled: false
+
+LineLength:
+  Max: 100
+
+# Reports false positives for `CONSTANT % ['value', 'value']` (RuboCop 0.33.0)
+Lint/FormatParameterMismatch:
+  Enabled: false
+
+MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Max: 20
+
+PerceivedComplexity:
+  Max: 8
+
+# Prefer curly braces except for %i/%w/%W, since those return arrays.
+PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%': '{}'
+    '%i': '[]'
+    '%q': '{}'
+    '%Q': '{}'
+    '%r': '{}'
+    '%s': '()'
+    '%w': '[]'
+    '%W': '[]'
+    '%x': '{}'
+
+# Renaming `has_something?` to `something?` obfuscates whether it is a "is-a" or
+# a "has-a" relationship.
+PredicateName:
+  Enabled: false
+
+SignalException:
+  Enabled: false
+
+# Forcing a particular name (e.g. |a, e|) for inject methods prevents you from
+# choosing intention-revealing names.
+SingleLineBlockParams:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Exclude:
+    - '*.gemspec'
+
+Style/IndentArray:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
+
+UselessAccessModifier:
+  Enabled: false

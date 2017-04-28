@@ -1,0 +1,23 @@
+# Run Overcommit within a Bundler context using this repo's Gemfile
+gemfile: Gemfile
+
+PreCommit:
+  BundleCheck:
+    enabled: true
+
+  ExecutePermissions:
+    enabled: true
+    exclude:
+      - 'bin/scss-lint'
+
+  HardTabs:
+    enabled: true
+
+  RuboCop:
+    enabled: true
+
+  TrailingWhitespace:
+    enabled: true
+
+  YamlSyntax:
+    enabled: true

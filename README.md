@@ -9,10 +9,12 @@ NOTE: Please install from your USERNAME directory.
 
 ### 1. Make sure previous gem is deleted localy
 `gem uninstall scss_lint`
+
 `gem clean scss_lint`
 
 ### 2. Make sure previous gem is deleted globaly
 `sudo gem uninstall scss_lint`
+
 `sudo gem clean scss_lint`
 
 ### 3. Make sure  scss_lint is not listed, if so, it was not uninstalled properly
@@ -25,6 +27,7 @@ NOTE: Please install from your USERNAME directory.
 
 ### 5. Install Gem to use with sublime text
 `sudo gem build scss_lint.gemspec`
+
 `sudo gem install scss_lint-0.52.0.gem`
 
 ### 6. Enjoy! 

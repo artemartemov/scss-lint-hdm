@@ -5,7 +5,9 @@
 ## Installation
 
 NOTE: If you don't have scss-lint gem installed skip over to step 3
-NOTE: Please install from your USERNAME directory. 
+
+### NOTE: 
+Please install from your USERNAME directory. 
 
 ### 1. Make sure previous gem is deleted localy
 `gem uninstall scss_lint`

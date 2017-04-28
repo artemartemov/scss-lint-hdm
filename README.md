@@ -17,7 +17,7 @@ sudo gem clean scss_lint
 
 ### 3. Make sure  scss_lint is not listed, if so, it was not uninstalled properly
  - `gem list`
- - `git clone -b feature/VID-2578 git@github.com:artemartemov/scss-lint-hdm.git`
+ - `git clone -b master git@github.com:artemartemov/scss-lint-hdm.git`
  - `cd scss-lint/`
  
 ### 4. Test Gem locally
